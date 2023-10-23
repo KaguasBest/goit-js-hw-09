@@ -1,8 +1,14 @@
-import { changeColor } from './changeColor';
+// import { changeColor } from './changeColor';
 import { refs } from './common';
+import { getRandomHexColor } from './getRandomHexColor';
 
 export function onClickStartSwitchColor() {
-  startChangeColor = setInterval(changeColor, 1000);
+  startChangeColor = setInterval(() => {
+    const color = getRandomHexColor();
+    refs.body.style.backgroundColor = color;
+    refs.startBtn.disabled = true;
+    refs.stopBtn.disabled = false;
+  }, 1000);
 }
 
 export function onClickStopSwitchColor() {

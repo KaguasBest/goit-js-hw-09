@@ -5,6 +5,7 @@ import { convertMs } from './convertMs';
 
 export function clickStartBtn() {
   refs.startBtn.disabled = true;
+  refs.datetimePicker.disabled = true;
   const timerInterval = setInterval(() => {
     const currentData = new Date().getTime();
     const dateChosen = chosenInputDate.getTime();
