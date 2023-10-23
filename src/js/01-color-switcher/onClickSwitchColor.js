@@ -2,6 +2,8 @@
 import { refs } from './common';
 import { getRandomHexColor } from './getRandomHexColor';
 
+let startChangeColor;
+
 export function onClickStartSwitchColor() {
   startChangeColor = setInterval(() => {
     const color = getRandomHexColor();
